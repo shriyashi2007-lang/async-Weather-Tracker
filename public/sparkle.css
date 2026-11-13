@@ -1,0 +1,28 @@
+:root {
+  --bg: #fff7fb;
+  --card: #ffffff;
+  --heading: #7c3f5b;
+  --text: #87566d;
+  --muted: #b78da2;
+  --accent: #f08bb5;
+  --accent-hover: #de6d9d;
+  --rose: #ffe6f1;
+  --line: #f4cddd;
+  --soft: #fffafd;
+  --shadow: 0 12px 40px #ef9fc522, 0 3px 9px #e88db018;
+}
+body { background: radial-gradient(circle at 10% 10%, #fff 0 7%, transparent 30%), radial-gradient(circle at 90% 20%, #ffdcea 0, transparent 28%), var(--bg); }
+.ambient-one { background: #ffc8df70; }
+.ambient-two { background: #fff  !important; opacity: .65; }
+.panel, form { border-color: #f7d9e5; box-shadow: var(--shadow); }
+.current { background: linear-gradient(135deg, #fff, #fff3f8); }
+.brand-icon, .brand-dot, .eyebrow, .search-icon, .status-dot, .metric-icon, .location-pin, .hero-icon { color: var(--accent); }
+#submit, .error-card button { background: var(--accent); }
+#submit:hover, .error-card button:hover { background: var(--accent-hover); }
+.units { background: #fff0f6; border-color: #f4cddd; }
+.units button[aria-pressed=true] { color: var(--accent-hover); }
+.shimmer { background: linear-gradient(100deg, #fff0f6 25%, #fff 45%, #fff0f6 65%); }
+.shell::before, .shell::after { content: '✦'; position: fixed; pointer-events: none; color: #f3a4c4; opacity: .45; font-size: 20px; animation: sparkle 4s ease-in-out infinite; }
+.shell::before { top: 18%; left: 6%; }
+.shell::after { top: 32%; right: 7%; animation-delay: -2s; }
+@keyframes sparkle { 0%,100% { opacity: .2; transform: scale(.7) rotate(0deg); } 50% { opacity: .8; transform: scale(1.25) rotate(20deg); } }
